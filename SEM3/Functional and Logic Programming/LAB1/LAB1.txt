@@ -1,3 +1,0 @@
-9.
-a. Insert an element on the positionn in a list.
-b. Define a predicate to determine the greatest common divisor of allnumbers froma list.
