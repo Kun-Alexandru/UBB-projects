@@ -1,0 +1,120 @@
+
+Execution Stack:
+(bool a; (int v; (a = true; (IF (a) THEN (v = 2) ELSE (v = 3); print(v)))))
+
+Symbol Table:
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(int v; (a = true; (IF (a) THEN (v = 2) ELSE (v = 3); print(v))))
+bool a
+
+Symbol Table:
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(int v; (a = true; (IF (a) THEN (v = 2) ELSE (v = 3); print(v))))
+
+Symbol Table:
+a: false
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(a = true; (IF (a) THEN (v = 2) ELSE (v = 3); print(v)))
+int v
+
+Symbol Table:
+a: false
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(a = true; (IF (a) THEN (v = 2) ELSE (v = 3); print(v)))
+
+Symbol Table:
+a: false
+v: 0
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(IF (a) THEN (v = 2) ELSE (v = 3); print(v))
+a = true
+
+Symbol Table:
+a: false
+v: 0
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(IF (a) THEN (v = 2) ELSE (v = 3); print(v))
+
+Symbol Table:
+a: true
+v: 0
+
+Output:
+
+======================================================================
+
+Execution Stack:
+print(v)
+IF (a) THEN (v = 2) ELSE (v = 3)
+
+Symbol Table:
+a: true
+v: 0
+
+Output:
+
+======================================================================
+
+Execution Stack:
+print(v)
+v = 2
+
+Symbol Table:
+a: true
+v: 0
+
+Output:
+
+======================================================================
+
+Execution Stack:
+print(v)
+
+Symbol Table:
+a: true
+v: 2
+
+Output:
+
+======================================================================
+
+Execution Stack:
+
+Symbol Table:
+a: true
+v: 2
+
+Output:
+2
+
+======================================================================

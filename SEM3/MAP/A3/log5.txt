@@ -1,0 +1,203 @@
+
+Execution Stack:
+(string varf; (varf = test_empty.in; (openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))))))
+
+Symbol Table:
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(varf = test_empty.in; (openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))))
+string varf
+
+Symbol Table:
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(varf = test_empty.in; (openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))))
+
+Symbol Table:
+varf: 
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))))
+varf = test_empty.in
+
+Symbol Table:
+varf: 
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))))
+
+Symbol Table:
+varf: test_empty.in
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))
+openFile varf
+
+Symbol Table:
+varf: test_empty.in
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))
+
+Symbol Table:
+varf: test_empty.in
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))
+int varc
+
+Symbol Table:
+varf: test_empty.in
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))
+
+Symbol Table:
+varf: test_empty.in
+varc: 0
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))
+readFile varf into variable varc
+
+Symbol Table:
+varf: test_empty.in
+varc: 0
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))
+
+Symbol Table:
+varf: test_empty.in
+varc: 0
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(readFile varf into variable varc; (print(varc); closeFile varf))
+print(varc)
+
+Symbol Table:
+varf: test_empty.in
+varc: 0
+
+Output:
+
+======================================================================
+
+Execution Stack:
+(readFile varf into variable varc; (print(varc); closeFile varf))
+
+Symbol Table:
+varf: test_empty.in
+varc: 0
+
+Output:
+0
+
+======================================================================
+
+Execution Stack:
+(print(varc); closeFile varf)
+readFile varf into variable varc
+
+Symbol Table:
+varf: test_empty.in
+varc: 0
+
+Output:
+0
+
+======================================================================
+
+Execution Stack:
+(print(varc); closeFile varf)
+
+Symbol Table:
+varf: test_empty.in
+varc: 0
+
+Output:
+0
+
+======================================================================
+
+Execution Stack:
+closeFile varf
+print(varc)
+
+Symbol Table:
+varf: test_empty.in
+varc: 0
+
+Output:
+0
+
+======================================================================
+
+Execution Stack:
+closeFile varf
+
+Symbol Table:
+varf: test_empty.in
+varc: 0
+
+Output:
+0
+0
+
+======================================================================
+
+Execution Stack:
+
+Symbol Table:
+varf: test_empty.in
+varc: 0
+
+Output:
+0
+0
+
+======================================================================
