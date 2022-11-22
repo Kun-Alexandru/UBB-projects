@@ -9,13 +9,13 @@ GO
 --Your task is to create a versioning mechanism that allows you to easily switch between database versions.
 
 --Write SQL scripts that:
---a. modify the type of a column; DONE
---b. add / remove a column; DONE
---c. add / remove a DEFAULT constraint; DONE
---d. add / remove a primary key; DONE
---e. add / remove a candidate key; DONE
+--a. modify the type of a column; 
+--b. add / remove a column; 
+--c. add / remove a DEFAULT constraint; 
+--d. add / remove a primary key; 
+--e. add / remove a candidate key; 
 --f. add / remove a foreign key;
---g. create / drop a table. DONE
+--g. create / drop a table. 
 
 --For each of the scripts above, write another one that reverts the operation. Place each script in a stored procedure. Use a simple, intuitive naming convention.
 
@@ -38,6 +38,7 @@ AS
 	ALTER COLUMN quantity int
 GO
 
+SELECT * FROM INFORMATION_SCHEMA.COLUMNS
 
 EXEC setQuantityProductProvidersFloat
 Select *
@@ -201,31 +202,30 @@ insert into proceduresTable values (7, 8, 'addForeignKeyOrders')
 insert into proceduresTable values (8, 7, 'removeForeignKeyOrders')
 
 create procedure goToVersion(@newVersion int) as
-    declare @curr int
-    declare @var varchar(max)
-    select @curr=version from versionTable
+    declare @currentVersion int
+    declare @proc varchar(max)
+    select @currentVersion=version from versionTable
 
-    IF @newVersion > 8 OR @newVersion < 0
+    IF @newVersion > 8 OR @newVersion <= 0
 	BEGIN
-        RAISERROR ('Bad version', 10, 1)
+        RAISERROR ('Invalid version', 10, 1)
 	END
 	ELSE 
 	BEGIN
-
-		WHILE @curr > @newVersion 
+		WHILE @currentVersion > @newVersion 
 		BEGIN
-			SELECT @var=procedureName FROM proceduresTable WHERE oldVersion=@curr and newVersion=@curr-1
-			PRINT 'The version was ' + convert(varchar(10), @curr) + ' , new version is ' + convert(varchar(10), @curr-1) + ' applied ' + @var
-			EXEC (@var)
-			SET @curr=@curr-1
+			SELECT @proc=procedureName FROM proceduresTable WHERE oldVersion=@currentVersion and newVersion=@currentVersion-1
+			PRINT 'The version was ' + convert(varchar(10), @currentVersion) + ' , new version is ' + convert(varchar(10), @currentVersion-1) + ' applied ' + @proc
+			EXEC (@proc)
+			SET @currentVersion=@currentVersion-1
 		END
 
-		WHILE @curr < @newVersion 
+		WHILE @currentVersion < @newVersion 
 		BEGIN
-			SELECT @var=procedureName FROM proceduresTable WHERE oldVersion=@curr and newVersion=@curr+1
-			PRINT 'The version was ' + convert(varchar(10), @curr) + ' , new version is ' + convert(varchar(10), @curr+1) + ' applied ' + @var
-			EXEC (@var)
-			SET @curr=@curr+1
+			SELECT @proc=procedureName FROM proceduresTable WHERE oldVersion=@currentVersion and newVersion=@currentVersion+1
+			PRINT 'The version was ' + convert(varchar(10), @currentVersion) + ' , new version is ' + convert(varchar(10), @currentVersion+1) + ' applied ' + @proc
+			EXEC (@proc)
+			SET @currentVersion=@currentVersion+1
 		END
 		UPDATE versionTable SET version = @newVersion
 	END
