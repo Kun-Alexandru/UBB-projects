@@ -1,18 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ;                            {
 ;appears(l1,l2,l3,e) =      False, if n = 0
 ;                           True, if l1 = e
