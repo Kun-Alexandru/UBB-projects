@@ -1,0 +1,136 @@
+2022/12/07 08:36:54
+Execution Stack:
+(Ref int v; (New(v, 20); (Ref Ref int a; (New(a, v); (print(v); print(a))))))
+Heap:
+
+Symbol Table:
+
+Output:
+
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+Ref int v
+(New(v, 20); (Ref Ref int a; (New(a, v); (print(v); print(a)))))
+Heap:
+
+Symbol Table:
+
+Output:
+
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+(New(v, 20); (Ref Ref int a; (New(a, v); (print(v); print(a)))))
+Heap:
+
+Symbol Table:
+v --> (0, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+New(v, 20)
+(Ref Ref int a; (New(a, v); (print(v); print(a))))
+Heap:
+
+Symbol Table:
+v --> (0, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+(Ref Ref int a; (New(a, v); (print(v); print(a))))
+Heap:
+1 --> 20
+Symbol Table:
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+Ref Ref int a
+(New(a, v); (print(v); print(a)))
+Heap:
+1 --> 20
+Symbol Table:
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+(New(a, v); (print(v); print(a)))
+Heap:
+1 --> 20
+Symbol Table:
+a --> (0, Ref int)
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+New(a, v)
+(print(v); print(a))
+Heap:
+1 --> 20
+Symbol Table:
+a --> (0, Ref int)
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+(print(v); print(a))
+Heap:
+1 --> 20
+2 --> (1, int)
+Symbol Table:
+a --> (2, Ref int)
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+print(v)
+print(a)
+Heap:
+1 --> 20
+2 --> (1, int)
+Symbol Table:
+a --> (2, Ref int)
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+print(a)
+Heap:
+1 --> 20
+2 --> (1, int)
+Symbol Table:
+a --> (2, Ref int)
+v --> (1, int)
+Output:
+(1, int)
+--------------------------------------------------
+2022/12/07 08:36:54
+Execution Stack:
+
+Heap:
+1 --> 20
+2 --> (1, int)
+Symbol Table:
+a --> (2, Ref int)
+v --> (1, int)
+Output:
+(1, int)
+(2, Ref int)
+--------------------------------------------------

@@ -1,0 +1,300 @@
+2022/12/07 12:17:10
+Execution Stack:
+(int v; (v = 4; (While (v > 0) { (print(v); v = v - 1) }; print(v))))
+Heap:
+
+Symbol Table:
+
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+int v
+(v = 4; (While (v > 0) { (print(v); v = v - 1) }; print(v)))
+Heap:
+
+Symbol Table:
+
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+(v = 4; (While (v > 0) { (print(v); v = v - 1) }; print(v)))
+Heap:
+
+Symbol Table:
+v --> 0
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+v = 4
+(While (v > 0) { (print(v); v = v - 1) }; print(v))
+Heap:
+
+Symbol Table:
+v --> 0
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+(While (v > 0) { (print(v); v = v - 1) }; print(v))
+Heap:
+
+Symbol Table:
+v --> 4
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 4
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+(print(v); v = v - 1)
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 4
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+print(v)
+v = v - 1
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 4
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+v = v - 1
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 4
+Output:
+4
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 3
+Output:
+4
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+(print(v); v = v - 1)
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 3
+Output:
+4
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+print(v)
+v = v - 1
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 3
+Output:
+4
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+v = v - 1
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 3
+Output:
+4
+3
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 2
+Output:
+4
+3
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+(print(v); v = v - 1)
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 2
+Output:
+4
+3
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+print(v)
+v = v - 1
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 2
+Output:
+4
+3
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+v = v - 1
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 2
+Output:
+4
+3
+2
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 1
+Output:
+4
+3
+2
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+(print(v); v = v - 1)
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 1
+Output:
+4
+3
+2
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+print(v)
+v = v - 1
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 1
+Output:
+4
+3
+2
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+v = v - 1
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 1
+Output:
+4
+3
+2
+1
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+While (v > 0) { (print(v); v = v - 1) }
+print(v)
+Heap:
+
+Symbol Table:
+v --> 0
+Output:
+4
+3
+2
+1
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+print(v)
+Heap:
+
+Symbol Table:
+v --> 0
+Output:
+4
+3
+2
+1
+--------------------------------------------------
+2022/12/07 12:17:10
+Execution Stack:
+
+Heap:
+
+Symbol Table:
+v --> 0
+Output:
+4
+3
+2
+1
+0
+--------------------------------------------------

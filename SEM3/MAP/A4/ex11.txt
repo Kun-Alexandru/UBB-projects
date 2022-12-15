@@ -1,0 +1,137 @@
+2022/12/07 12:17:09
+Execution Stack:
+(Ref int v; (New(v, 50); (Ref Ref int a; (New(a, v); (New(v, 30); print(readFromHeap(readFromHeap(a))))))))
+Heap:
+
+Symbol Table:
+
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+Ref int v
+(New(v, 50); (Ref Ref int a; (New(a, v); (New(v, 30); print(readFromHeap(readFromHeap(a)))))))
+Heap:
+
+Symbol Table:
+
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+(New(v, 50); (Ref Ref int a; (New(a, v); (New(v, 30); print(readFromHeap(readFromHeap(a)))))))
+Heap:
+
+Symbol Table:
+v --> (0, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+New(v, 50)
+(Ref Ref int a; (New(a, v); (New(v, 30); print(readFromHeap(readFromHeap(a))))))
+Heap:
+
+Symbol Table:
+v --> (0, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+(Ref Ref int a; (New(a, v); (New(v, 30); print(readFromHeap(readFromHeap(a))))))
+Heap:
+1 --> 50
+Symbol Table:
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+Ref Ref int a
+(New(a, v); (New(v, 30); print(readFromHeap(readFromHeap(a)))))
+Heap:
+1 --> 50
+Symbol Table:
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+(New(a, v); (New(v, 30); print(readFromHeap(readFromHeap(a)))))
+Heap:
+1 --> 50
+Symbol Table:
+a --> (0, Ref int)
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+New(a, v)
+(New(v, 30); print(readFromHeap(readFromHeap(a))))
+Heap:
+1 --> 50
+Symbol Table:
+a --> (0, Ref int)
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+(New(v, 30); print(readFromHeap(readFromHeap(a))))
+Heap:
+1 --> 50
+2 --> (1, int)
+Symbol Table:
+a --> (2, Ref int)
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+New(v, 30)
+print(readFromHeap(readFromHeap(a)))
+Heap:
+1 --> 50
+2 --> (1, int)
+Symbol Table:
+a --> (2, Ref int)
+v --> (1, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+print(readFromHeap(readFromHeap(a)))
+Heap:
+1 --> 50
+2 --> (1, int)
+3 --> 30
+Symbol Table:
+a --> (2, Ref int)
+v --> (3, int)
+Output:
+
+--------------------------------------------------
+2022/12/07 12:17:09
+Execution Stack:
+
+Heap:
+1 --> 50
+2 --> (1, int)
+3 --> 30
+Symbol Table:
+a --> (2, Ref int)
+v --> (3, int)
+Output:
+50
+--------------------------------------------------
