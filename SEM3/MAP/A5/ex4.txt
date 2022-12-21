@@ -1,0 +1,412 @@
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(string varf; (varf = test.in; (openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))))))
+Heap:
+
+Symbol Table:
+
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+string varf
+(varf = test.in; (openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))))
+Heap:
+
+Symbol Table:
+
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+string varf
+(varf = test.in; (openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))))
+Heap:
+
+Symbol Table:
+
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(varf = test.in; (openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))))
+Heap:
+
+Symbol Table:
+varf --> 
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(varf = test.in; (openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))))
+Heap:
+
+Symbol Table:
+varf --> 
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+varf = test.in
+(openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))))
+Heap:
+
+Symbol Table:
+varf --> 
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+varf = test.in
+(openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))))
+Heap:
+
+Symbol Table:
+varf --> 
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))))
+Heap:
+
+Symbol Table:
+varf --> test.in
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(openFile varf; (int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))))
+Heap:
+
+Symbol Table:
+varf --> test.in
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+openFile varf
+(int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))
+Heap:
+
+Symbol Table:
+varf --> test.in
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+openFile varf
+(int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))
+Heap:
+
+Symbol Table:
+varf --> test.in
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))
+Heap:
+
+Symbol Table:
+varf --> test.in
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(int varc; (readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))))
+Heap:
+
+Symbol Table:
+varf --> test.in
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+int varc
+(readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))
+Heap:
+
+Symbol Table:
+varf --> test.in
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+int varc
+(readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))
+Heap:
+
+Symbol Table:
+varf --> test.in
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 0
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(readFile varf into variable varc; (print(varc); (readFile varf into variable varc; (print(varc); closeFile varf))))
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 0
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+readFile varf into variable varc
+(print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 0
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+readFile varf into variable varc
+(print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 0
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 15
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(print(varc); (readFile varf into variable varc; (print(varc); closeFile varf)))
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 15
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+print(varc)
+(readFile varf into variable varc; (print(varc); closeFile varf))
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 15
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+print(varc)
+(readFile varf into variable varc; (print(varc); closeFile varf))
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 15
+Output:
+
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(readFile varf into variable varc; (print(varc); closeFile varf))
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 15
+Output:
+15
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(readFile varf into variable varc; (print(varc); closeFile varf))
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 15
+Output:
+15
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+readFile varf into variable varc
+(print(varc); closeFile varf)
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 15
+Output:
+15
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+readFile varf into variable varc
+(print(varc); closeFile varf)
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 15
+Output:
+15
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(print(varc); closeFile varf)
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 50
+Output:
+15
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+(print(varc); closeFile varf)
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 50
+Output:
+15
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+print(varc)
+closeFile varf
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 50
+Output:
+15
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+print(varc)
+closeFile varf
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 50
+Output:
+15
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+closeFile varf
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 50
+Output:
+15
+50
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+closeFile varf
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 50
+Output:
+15
+50
+--------------------------------------------------
+ID: 4
+2022/12/21 10:04:27
+Execution Stack:
+
+Heap:
+
+Symbol Table:
+varf --> test.in
+varc --> 50
+Output:
+15
+50
+--------------------------------------------------
