@@ -1,0 +1,51 @@
+body {
+    background-color: #252830;
+}
+
+.glow {
+    color: white;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+
+}
+
+.shadow {
+    color: white;
+    text-shadow: 3px 3px 4px #ff0000;
+    font-size: 30px;
+}
+
+.fire {
+    animation: animation 1s alternate infinite;
+    color: white;
+    font-size: 30px;
+}
+
+@keyframes animation {
+    from {
+        text-shadow: 0 0 2px #fefcc9,
+            1px -1px 3px #feec85,
+            -2px -2px 4px #ffae34,
+            2px -4px 5px #ec760c,
+            -2px -6px 6px #cd4606,
+            0 -8px 7px #973716,
+            1px -9px 8px #451b0e;
+    }
+
+    to {
+        text-shadow: 0 0 2px #fefcc9,
+            1px -1px 3px #fefcc9,
+            -2px -2px 4px #feec85,
+            2px -4px 6px #ffae34,
+            -0px -8px 8px #ec760c,
+            1 -9px 8px #cd4606;
+    }
+}
+
+
+
+.underline {
+    color: white;
+    font-size: 30px;
+    text-decoration: underline wavy rgb(208, 23, 159) 2px;
+    text-shadow: 0px 2px 0px #ff0000;
+}
