@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: scroll;
+}
+
+h1 {font-family: Futura;}
+p {font-family: Courier;}
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.text-content {
+    flex-direction: column;
+}
+
+.photo {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 30px 0 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: none;
+}
+
+.screen.visible {
+    display: block;
+}
+
+#screen1{
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+#screen2{
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+#screen3{
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+#screen4{
+    background-color: rgba(255, 0, 0, 0.5);
+}
