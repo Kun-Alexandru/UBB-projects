@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #252830;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("wallpaper2you_29162.jpg");
+    /*animation-name: slideDown;
+    transition: background-image 0.5s ease-in-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out; */
+}
+
+@keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+}
+
+#main-section {
+    margin-top: 300px;
+    width: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#buttons-section {
+    display: flex;
+    flex-flow: column;
+    gap: 50px;
+}
+
+.btn {
+    height: 60px;
+    width: 300px;
+    color: white;
+    background-color: magenta;
+}
+
+.title {
+    color: cyan;
+}
+
+li{
+    margin-top: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
