@@ -1,0 +1,33 @@
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe.config
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\bin\Debug\Lab2.pdb
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.AssemblyReference.cache
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.SuggestedBindingRedirects.cache
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\obj\Debug\Lab2.Form1.resources
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\obj\Debug\Lab2.Properties.Resources.resources
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.GenerateResource.cache
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\obj\Debug\Lab2.exe
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\Lab2\obj\Debug\Lab2.pdb
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe.config
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\bin\Debug\Lab2.pdb
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.AssemblyReference.cache
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.SuggestedBindingRedirects.cache
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\obj\Debug\Lab2.Form1.resources
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\obj\Debug\Lab2.Properties.Resources.resources
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.GenerateResource.cache
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\obj\Debug\Lab2.exe
+C:\Users\night\Desktop\Facultate An 2\Semestru 2\(DBMSs) Database Management Systems\Assignments\Lab2\Lab2\Lab2\obj\Debug\Lab2.pdb
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe.config
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\bin\Debug\Lab2.pdb
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.AssemblyReference.cache
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.SuggestedBindingRedirects.cache
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\obj\Debug\Lab2.Form1.resources
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\obj\Debug\Lab2.Properties.Resources.resources
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.GenerateResource.cache
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\obj\Debug\Lab2.exe
+C:\Users\eXoDuSs\Desktop\acciojob-amazon-clone-main\Lab2\Lab2\Lab2\obj\Debug\Lab2.pdb
