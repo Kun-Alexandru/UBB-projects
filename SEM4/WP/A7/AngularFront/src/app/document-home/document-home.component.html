@@ -1,0 +1,66 @@
+<h1>Documents</h1>
+<div id = "buttonDiv">
+<button (click)="onAddClick()">Add</button>
+<button (click)="onBrowserClick()">Browse</button>
+</div>
+<table id="documentTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Number of Pages</th>
+        <th>Type</th>
+        <th>Format</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let documen of documents; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ documen.title }}</td>
+            <td>{{ documen.author }}</td>
+            <td>{{ documen.numberOfPages }}</td>
+            <td>{{ documen.type }}</td>
+            <td>{{ documen.format }}</td>
+            <td>
+              <button [routerLink]="['/edit']" [queryParams]="{id: documen.id}">Edit</button>
+              <!--<button [routerLink]="['/delete']" [queryParams]="{id: documen.id}">Delete</button>-->
+              <button (click)="openConfirmationDialog(documen.id)">Delete</button>
+
+            </td>
+          </tr>
+    </tbody>
+  </table>
+
+<br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <table id="documentTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Number of Pages</th>
+        <th>Type</th>
+        <th>Format</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let documen of documents2; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ documen.title }}</td>
+            <td>{{ documen.author }}</td>
+            <td>{{ documen.numberOfPages }}</td>
+            <td>{{ documen.type }}</td>
+            <td>{{ documen.format }}</td>
+            <td>
+              <button [routerLink]="['/edit']" [queryParams]="{id: documen.id}">Edit</button>
+              <!--<button [routerLink]="['/delete']" [queryParams]="{id: documen.id}">Delete</button>-->
+              <button (click)="openConfirmationDialog(documen.id)">Delete</button>
+
+            </td>
+          </tr>
+    </tbody>
+  </table>

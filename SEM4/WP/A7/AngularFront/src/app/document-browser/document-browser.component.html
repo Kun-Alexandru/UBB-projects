@@ -1,0 +1,56 @@
+<h2>Browse Document</h2>
+
+<div id="browse-container">
+  
+  <div id="filter-container">
+    <div class="filter">
+      <label for="type-select">Type:</label>
+      <select id="type-select" [(ngModel)]="selectedType" (change)="onTypeChange()">
+        <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+  
+    <div class="filter">
+      <label for="format-select">Format:</label>
+      <select id="format-select" [(ngModel)]="selectedFormat" (change)="onFormatChange()">
+        <option *ngFor="let format of formats" [value]="format">{{ format }}</option>
+      </select>
+    </div>
+  </div>
+  <div id="previousFilter">{{ previousFilter }}</div>
+  <div id="documentTable">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Number of Pages</th>
+          <th>Type</th>
+          <th>Format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="documents.length === 0">
+          <td colspan="6">No documents with the selected format/type.</td>
+        </tr>
+        <tr *ngFor="let document of documents; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ document.title }}</td>
+          <td>{{ document.author }}</td>
+          <td>{{ document.numberOfPages }}</td>
+          <td>{{ document.type }}</td>
+          <td>{{ document.format }}</td>
+          <td>
+            <button [routerLink]="['/edit']" [queryParams]="{id: document.id}">Edit</button>
+            <!--<button [routerLink]="['/delete']" [queryParams]="{id: documen.id}">Delete</button>-->
+            <button (click)="openConfirmationDialog(document.id)">Delete</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br> <br> <br> <br>
+<button type="button" (click)="goToHome()">Back</button>

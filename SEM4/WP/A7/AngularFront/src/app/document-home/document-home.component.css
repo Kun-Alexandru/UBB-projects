@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #documentTable {
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  button {
+    margin: 0 10px;
+  }
+
+  #buttonDiv {
+    text-align: center;
+    margin-bottom: 20px;
+  }
