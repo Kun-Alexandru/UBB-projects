@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Document>
+
+<h4>Search Documents</h4>
+<hr />
+
+<!-- Search form -->
+<form asp-action="ShowSearchForm" method="get">
+    <div class="form-group">
+        <label for="SearchType">Type:</label>
+        <input type="text" class="form-control" id="SearchType" name="SearchType" value="@ViewBag.SearchType" />
+    </div>
+    <div class="form-group">
+        <label for="SearchFormat">Format:</label>
+        <input type="text" class="form-control" id="SearchFormat" name="SearchFormat" value="@ViewBag.SearchFormat" />
+    </div>
+    <!-- Pass the previous filter as a hidden input -->
+    <input type="hidden" name="PreviousFilter" value="@ViewBag.LastUsedFilter" />
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+
+<!-- Previous filter text -->
+@if (!string.IsNullOrEmpty(ViewBag.PreviousFilter))
+{
+    <div class="mt-3">
+        <small>Previous filter: @ViewBag.PreviousFilter</small>
+    </div>
+}
+
+<hr />
+
+<!-- Search results -->
+@if (ViewBag.SearchResults != null && ViewBag.SearchResults.Count > 0)
+{
+    <h4>Search Results</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Type</th>
+                <th>Format</th>
+                <th>Pages</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var document in ViewBag.SearchResults)
+            {
+                <tr>
+                    <td>@document.Title</td>
+                    <td>@document.Author</td>
+                    <td>@document.Type</td>
+                    <td>@document.Format</td>
+                    <td>@document.Pages</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No search results found.</p>
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#SearchType').on('input', function () {
+                $('#SearchFormat').val('');
+            });
+
+            $('#SearchFormat').on('input', function () {
+                $('#SearchType').val('');
+            });
+        });
+    </script>
+}
