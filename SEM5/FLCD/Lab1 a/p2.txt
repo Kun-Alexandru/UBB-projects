@@ -1,0 +1,14 @@
+declare num;
+read_number(num);
+if `num greater than 1 then{
+    for `i from (2 to `num with step 1){ //doesnt include a
+        if (`num div 2) is equal to 0 then{
+            print << "Number is not prime";
+            break;
+       };
+    };
+    print << "Number is prime";
+};
+else do{
+    print << "Number is not prime";
+};

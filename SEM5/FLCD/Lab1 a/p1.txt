@@ -1,0 +1,15 @@
+declare a, b, c, max = 0;
+read_number(a);
+read_number(b);
+read_number(c);
+if `a is greater than `max then{
+    max = a;
+};
+if `b is greater than `max then{
+    max = b;
+};
+if `c is greater than `max then{
+    max = c;
+};
+
+print << "The max of the 3 numbers is" << convert_to_string(max);

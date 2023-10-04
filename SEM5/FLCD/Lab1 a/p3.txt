@@ -1,0 +1,8 @@
+declare n, sum = 0, number;
+read_number(n);
+print << "Enter " << convert_to_string(n) << "numbers";
+for `i from (0 to `n with step 1){
+    read_number(number);
+    sum = sum + number;
+};
+print << "Sum of the numbers is" << convert_to_string(sum);
