@@ -1,0 +1,47 @@
+Specification (file Lexic.txt)
+
+Alphabet:
+
+a) a-z
+b) A-Z
+c) 0-9
+d) _ (underline)
+
+1. Lexic:
+
+a) Special symbols, representing:
+
+-operators: 
+	+ - / * ** =
+-separators: 
+	{} [] : ; space ,
+-reserved words: 
+	read_number, read_string, declare, if, then, else, for, to, with step, is equal, is not equal,  is greater than, is greater or equal than, is lower than, is lower or equal than, while, print, return 
+
+b) Identifiers
+
+-a sequence of letters, digits and underline, such that the first character is a letter; the rule is:
+
+identifier ::= letter | letter{letter}{digit} | letter{letter}{underline}{digit}
+letter ::= "A" | "B" | ... | "Z" | "a" | "b" | ... | "z" |
+digit ::= "0" | "1" |...| "9"
+underline ::= "_"
+
+c) constants
+
+1. Integer - rule:
+
+numconst := "+"num | "-"num | num
+num := digit{num}
+
+2. Character 
+
+character := letter | digit | underline | space
+
+3. String 
+
+constcharacter := "string"
+string := char{string}
+char := letter | digit | underline | space
+
+
