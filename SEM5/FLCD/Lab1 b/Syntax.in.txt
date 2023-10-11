@@ -1,0 +1,41 @@
+program ::= "start" declarationlist compoundstmt
+
+declarationlist ::= declaration | declaration "," declarationlist
+
+declaration ::= "declare" IDENTIFIER | "declare" IDENTIFIER "=" VALUE | arraydeclaration
+
+arraydeclaration ::= "declare" IDENTIFIER "[" numconst "]"
+
+VALUE ::= numconst | character |string
+
+statement ::= simplestatement | structstatement
+
+stmtlist ::= statement | statement ";" stmtlist
+
+compoundstmt ::= "{" stmtlist "}"
+
+simplestatement ::= assignstatement | iostatement
+
+assignstatement ::= IDENTIFIER "=" expression
+
+expression ::= expression "+" term | expression "-" term | term
+
+term ::= term "*" factor | term "**" factor | term "/" factor | term
+
+factor ::= "(" expression ")" | IDENTIFIER
+
+iostmt ::= "read_number" "(" IDENTIFIER" ");" | "read_string" "(" IDENTIFIER" ");" | "print" "<<" IDENTIFIER ";" | printlist 
+
+printlist ::= "<<" IDENTIFIER ";" | printlist 
+
+structstatement ::= compoundstmt | ifstatement | whilestatement | forstatement
+
+ifstmt ::= "if" condition "then" "{" statement "}" ";" {"else do" "{" statement "}" ";"}
+
+condition ::= "`"expression RELATION "`"expression
+
+whilestmt ::= "while" condition "do" statement
+
+forstatement ::= "`"IDENTIFIER "from" "(" expression "to" "`"expression "with step {numconst} "{" statement "};" 
+
+RELATION ::= "is lower than" | "is lower or equal to" | "is equal to" | "is different than" | "is greater or equal than" | "is greater than"
