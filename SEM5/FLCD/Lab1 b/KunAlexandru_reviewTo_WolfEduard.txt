@@ -1,0 +1,25 @@
+Lab2 review from Kun Alexandru
+
+
+lexic.txt
+
+- the language's clarity and simplicity make it easy to understand, reducing the learning curve for users
+- the lexic is very metodical, making it very easy to grasp, which is essential for developers and language users
+- the file is very easy to follow
+- you forgot to mention "else", "print" and "while" in the reserved keywords
+
+
+syntax.in
+
+- the fact that the syntax combines languages such as python and javascript makes it very friendly for the programmer; adding the rigorousness of C++ is the cherry on top 
+- the document is very easy to follow, making it very good for programmers that want to learn the basics of this language 
+- syntax.in doesn't look to have any mistakes
+
+
+token.in
+
+- putting a single element on a line makes it very easy to read
+- some elements are missing such as "_", "a-zA-z0-9", "while"
+
+
+I like the language overall. Learning it looks to be very easy for beginners and people that are already familiar with the most popular existing languages. 
