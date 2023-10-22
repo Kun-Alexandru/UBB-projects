@@ -1,0 +1,69 @@
+Task Trifle - Your Playful To-Do App
+
+1.Short description
+
+
+Task Trifle is a user-friendly and efficient task management app designed to simplify your daily life. With its intuitive interface and powerful features, Task Trifle helps you stay organized and on top of your to-do list. Whether you're managing work projects, personal chores, Task Trifle provides a streamlined solution for tracking tasks, setting priorities, and ensuring that nothing falls through the cracks. With Task Trifle, you'll find a fun approach to managing your tasks, making productivity a piece of cake. Say goodbye to the chaos of juggling multiple responsibilities and hello to a more productive and organized you.
+
+2.Domain details
+
+1. title: represents the name or title of a task
+2. description: describes the task in more detail, allowing the user to provide additional context or notes
+3. category: categorizes the event into different types or categories (work, personal)
+4. due_date: specifies the due date for the task
+5. priority: Indicates the priority level of the task (high, medium, low)
+6. status: represents the status of the task (not started, in progress, completed)
+
+3.CRUD
+
+Create (Add a New Task):
+
+-Users can add a new task by clicking on the "+" button at the bottom of the screen.
+-This action redirects the user to a new page
+-On this page, the user will be asked enter the following information for the new task:
+ @Title: a brief and meaningful title for the task
+ @Description: Additional details or notes related to the task
+ @Category: Choose the category (work, personal)
+ @Due Date: Due date for the task
+ @Priority: Select the priority level (high, medium, low)
+ @Status: Choose the status of task (not started, in progress, completed)
+
+
+Read (List All Tasks):
+
+-Users can view a list of all the tasks that they've added on the main screen.
+-This list displays important information about each task, including the title, due date, priority and category, alongside two buttons, one for remove and one for update.
+
+
+Update (Modify a Task):
+
+-Users can update an existing task by clicking on that specific task in the main screen.
+-This action redirects the user to a page, similar to the "Create" one.
+-The user can update any of the task details mentioned in the "Create" section.
+-After making changes, the task is updated if the user goes back on the main screen using "<-".
+
+
+Delete (Remove a Task):
+
+-Users can delete a task by clicking on a "Delete" (trash can) button.
+-To prevent accidents, the app asks the user for confirmation before removing the task.
+-If the user confirms the delete action, the task is removed from the list.
+
+
+4.Persistence details
+
+-Local db: Task Trifle will maintain a local database to store task-related data. This local database ensures that users can access their tasks even when they are offline. It should support all the CRUD operations, allowing the app to create, read, update, and delete tasks using the locally stored data.
+-Server: Task Trifle will be connected to a remote server to provide both online access to the app. When the user is online, the app communicates with the server to retrieve and update the corresponding data.
+
+
+5.What is happening when the device is offline
+
+-In situations where the user finds themselves without an internet connection, Task Trifle offers a robust offline functionality. Users can create, modify, and remove tasks locally, with all changes being stored within the device's local database. When a task is created while offline, it remains exclusively on the user's device, waiting for synchronization with the server. In offline mode, users can access and work with their tasks, viewing and editing them based on the information previously saved locally.
+
+-If the application is used on offline mode, here is how each operation is dealt with:
+ @create: the created entities will be stored on the local device (but not added on the server until the app is used on online mode)
+ @read: the operation will show all the entities that are saved on the local device, user can interact with them
+ @update: the modified entities will have the changes stored no the local device (but not modified on the server until the app is used on online mode)
+ @delete: the deleted entities will be deleted from the local device (but not removed on the server until the app is used on online mode)
+
+-As users interact with Task Trifle while offline, any updates to tasks are applied only within the local database, not affecting the server's data. If a task is deleted while offline, it is removed from the local device but remains intact on the server until an internet connection is reestablished. Once the application regains an online status, all changes made locally are automatically transmitted to the server, ensuring seamless synchronization. Task Trifle aims to provide uninterrupted task management, enabling users to work with the data saved on their device until they regain internet access, at which point the changes are communicated to the central server.
