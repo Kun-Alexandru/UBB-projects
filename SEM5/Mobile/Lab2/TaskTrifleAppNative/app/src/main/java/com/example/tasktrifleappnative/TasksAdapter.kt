@@ -14,7 +14,7 @@ class TasksAdapter(private var tasks: List<Task>, private val context: Context) 
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val duedateTextView: TextView = itemView.findViewById(R.id.dateTextView)
         val priorityTextView: TextView = itemView.findViewById(R.id.priorityTextView)
-        val statusTextView: TextView = itemView.findViewById(R.id.statusTextView)
+        val categoryTextView: TextView = itemView.findViewById(R.id.categoryTextView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
@@ -28,7 +28,7 @@ class TasksAdapter(private var tasks: List<Task>, private val context: Context) 
         val task = tasks[position]
         holder.titleTextView.text = task.title
         holder.duedateTextView.text = task.dueDate
-        holder.statusTextView.text = task.status
+        holder.categoryTextView.text = task.category
 
         holder.priorityTextView.text = "${task.priority} priority"
         when (task.priority.lowercase()) {
@@ -36,6 +36,11 @@ class TasksAdapter(private var tasks: List<Task>, private val context: Context) 
             "medium" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
             "low" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.goodgreen))
             else -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.white))
+        }
+
+        when (task.category.lowercase()) {
+            "work" -> holder.categoryTextView.setTextColor(ContextCompat.getColor(context, R.color.blue))
+            "personal" -> holder.categoryTextView.setTextColor(ContextCompat.getColor(context, R.color.lightblue))
         }
 
 
