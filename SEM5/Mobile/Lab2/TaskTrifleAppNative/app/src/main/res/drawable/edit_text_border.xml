@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/green" /> <!-- Green color -->
+            <corners android:radius="4dp" /> <!-- Rounded corners (optional) -->
+        </shape>
+    </item>
+    <item android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- White color (or your background color) -->
+        </shape>
+    </item>
+</layer-list>
