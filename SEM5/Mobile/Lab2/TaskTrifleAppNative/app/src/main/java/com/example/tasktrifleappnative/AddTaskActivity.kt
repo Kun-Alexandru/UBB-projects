@@ -28,5 +28,9 @@ class AddTaskActivity : AppCompatActivity() {
             finish()
             Toast.makeText(this,"Task saved", Toast.LENGTH_SHORT).show()
         }
+
+        binding.backButton.setOnClickListener {
+            finish()
+        }
     }
 }

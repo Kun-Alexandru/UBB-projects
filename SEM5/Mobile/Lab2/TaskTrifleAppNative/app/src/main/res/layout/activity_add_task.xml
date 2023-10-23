@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".AddTaskActivity">
 
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="28dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/addTextHeading" />
+
     <TextView
         android:id="@+id/addTextHeading"
         android:layout_width="wrap_content"
