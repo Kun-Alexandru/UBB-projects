@@ -7,6 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 import androidx.recyclerview.widget.RecyclerView
 
 class TasksAdapter(private var tasks: List<Task>, private val context: Context) : RecyclerView.Adapter<TasksAdapter.TaskViewHolder>() {
@@ -27,7 +31,14 @@ class TasksAdapter(private var tasks: List<Task>, private val context: Context) 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val task = tasks[position]
         holder.titleTextView.text = task.title
-        holder.duedateTextView.text = task.dueDate
+
+        val inputDateFormat = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
+        val inputDate = inputDateFormat.parse(task.dueDate)
+
+        val outputDateFormat = SimpleDateFormat("E, MMM dd, yyyy", Locale.getDefault())
+        val formattedDate = outputDateFormat.format(inputDate)
+
+        holder.duedateTextView.text = formattedDate
         holder.categoryTextView.text = task.category
 
         holder.priorityTextView.text = "${task.priority} priority"
@@ -42,7 +53,6 @@ class TasksAdapter(private var tasks: List<Task>, private val context: Context) 
             "work" -> holder.categoryTextView.setTextColor(ContextCompat.getColor(context, R.color.blue))
             "personal" -> holder.categoryTextView.setTextColor(ContextCompat.getColor(context, R.color.lightblue))
         }
-
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, UpdateTaskActivity::class.java)
