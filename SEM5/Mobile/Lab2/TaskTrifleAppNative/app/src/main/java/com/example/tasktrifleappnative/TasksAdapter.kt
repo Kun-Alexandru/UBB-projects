@@ -30,9 +30,8 @@ class TasksAdapter(private var tasks: List<Task>, private val context: Context) 
         holder.duedateTextView.text = task.dueDate
         holder.statusTextView.text = task.status
 
-        // Set priority text and color based on priority value
-        holder.priorityTextView.text = task.priority
-        when (task.priority.toLowerCase()) {
+        holder.priorityTextView.text = "${task.priority} priority"
+        when (task.priority.lowercase()) {
             "high" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.red))
             "medium" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
             "low" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.goodgreen))
