@@ -36,7 +36,7 @@ class TasksAdapter(private var tasks: List<Task>, private val context: Context) 
             "high" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.red))
             "medium" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
             "low" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.goodgreen))
-            else -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.green))
+            else -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.white))
         }
 
 

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TaskTrifleAppNative</string>
     <string name="add_new_task">Add a new task</string>
-    <string name="tasks">Tasks.</string>
+    <string name="tasks">Tasks</string>
     <string name="addItem">Add task</string>
     <string name="editItem">Edit the task</string>
 

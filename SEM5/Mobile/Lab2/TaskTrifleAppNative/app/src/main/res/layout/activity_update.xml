@@ -7,11 +7,21 @@
     tools:context=".UpdateTaskActivity">
 
     <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editTextHeading" />
+
+    <ImageView
         android:id="@+id/deleteButton"
         android:layout_width="50dp"
         android:layout_height="48dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="4dp"
-        android:layout_marginLeft="28dp"
         android:src="@drawable/baseline_delete_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/editTextHeading" />
@@ -33,9 +43,19 @@
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="28dp"
-        android:src="@drawable/baseline_done_24"
+        android:src="@drawable/baseline_save_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/llabelTitleUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editTextTitleUpdate"
@@ -44,73 +64,125 @@
         android:ems="10"
         android:inputType="text"
         android:hint="@string/title"
-        android:fontFamily="@font/poppins_bold"
-        app:layout_constraintTop_toBottomOf="@id/editTextHeading"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintTop_toBottomOf="@id/llabelTitleUpdate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/edit_text_border" />
 
+    <TextView
+        android:id="@+id/llabelDescriptionUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextTitleUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <EditText
         android:id="@+id/editTextDescriptionUpdate"
         android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:fontFamily="@font/poppins_bold"
-        android:ems="10"
-        android:inputType="text"
+
+        android:layout_height="144dp"
+        android:fontFamily="@font/poppins"
+        android:inputType="textMultiLine"
         android:hint="@string/description"
-        app:layout_constraintTop_toBottomOf="@id/editTextTitleUpdate"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/llabelDescriptionUpdate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/edit_text_border" />
+
+    <TextView
+        android:id="@+id/llabelCategoryUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextDescriptionUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <EditText
         android:id="@+id/editTextCategoryUpdate"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:ems="10"
         android:inputType="text"
         android:hint="@string/category"
-        app:layout_constraintTop_toBottomOf="@id/editTextDescriptionUpdate"
+        app:layout_constraintTop_toBottomOf="@id/llabelCategoryUpdate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/edit_text_border" />
+
+    <TextView
+        android:id="@+id/llabelStatusUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextCategoryUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editTextStatusUpdate"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:ems="10"
         android:inputType="text"
         android:hint="@string/status"
-        app:layout_constraintTop_toBottomOf="@id/editTextCategoryUpdate"
+        app:layout_constraintTop_toBottomOf="@id/llabelStatusUpdate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/edit_text_border" />
+
+    <TextView
+        android:id="@+id/llabelPriorityUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextStatusUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editTextPriorityUpdate"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:ems="10"
         android:inputType="text"
         android:hint="@string/priority"
-        app:layout_constraintTop_toBottomOf="@id/editTextStatusUpdate"
+        app:layout_constraintTop_toBottomOf="@id/llabelPriorityUpdate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/edit_text_border" />
+
+    <TextView
+        android:id="@+id/llabelDueDateUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due Date:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextPriorityUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editTextDue_DateUpdate"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:ems="10"
         android:inputType="date"
         android:hint="@string/due_date"
-        app:layout_constraintTop_toBottomOf="@id/editTextPriorityUpdate"
+        app:layout_constraintTop_toBottomOf="@id/llabelDueDateUpdate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/edit_text_border" />

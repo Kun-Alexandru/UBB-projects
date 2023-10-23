@@ -5,14 +5,14 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.tasktrifleappnative.databinding.ActivityUpdateBinding
+import java.text.SimpleDateFormat
+import java.util.Date
 
 class UpdateTaskActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUpdateBinding
     private lateinit var db: TasksDatabseHelper
     private var taskId: Int = -1
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,16 +42,41 @@ class UpdateTaskActivity : AppCompatActivity() {
             val dueDate = binding.editTextDueDateUpdate.text.toString()
             val priority = binding.editTextPriorityUpdate.text.toString()
             val status = binding.editTextStatusUpdate.text.toString()
-            val UpdatedTask = Task(taskId,title,description,category,dueDate,priority,status)
-            db.updateTask(UpdatedTask)
+
+            if (title.isNotBlank() && description.isNotBlank() && dueDate.isNotBlank() &&
+                category.isNotBlank() && priority.isNotBlank() && status.isNotBlank()) {
+                if (isValidDate(dueDate)) {
+                    if (isValidDateInFuture(dueDate)) {
+                        if (isValidPriority(priority)) {
+                            if (isValidCategory(category)) {
+                                val UpdatedTask = Task(taskId, title, description, category, dueDate, priority, status)
+                                db.updateTask(UpdatedTask)
+                                finish()
+                                Toast.makeText(this, "Changes saved", Toast.LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(this, "Invalid category. Use 'personal' or 'work'.", Toast.LENGTH_SHORT).show()
+                            }
+                        } else {
+                            Toast.makeText(this, "Invalid priority. Use 'high', 'medium', or 'low'.", Toast.LENGTH_SHORT).show()
+                        }
+                    } else {
+                        Toast.makeText(this, "Due date must be in the future.", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(this, "Invalid due date format. Please use dd.MM.yyyy.", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        binding.backButton.setOnClickListener {
             finish()
-            Toast.makeText(this,"Changes saved",Toast.LENGTH_SHORT).show()
         }
 
         binding.deleteButton.setOnClickListener{
             showDeleteConfirmationDialog()
         }
-
     }
 
     private fun showDeleteConfirmationDialog() {
@@ -77,5 +102,29 @@ class UpdateTaskActivity : AppCompatActivity() {
         Toast.makeText(this, "Task deleted", Toast.LENGTH_SHORT).show()
     }
 
+    private fun isValidDate(date: String): Boolean {
+        try {
+            val dateFormat = SimpleDateFormat("dd.MM.yyyy")
+            dateFormat.isLenient = false
+            dateFormat.parse(date)
+            return true
+        } catch (e: Exception) {
+            return false
+        }
+    }
 
+    private fun isValidDateInFuture(date: String): Boolean {
+        val dateFormat = SimpleDateFormat("dd.MM.yyyy")
+        val dueDate = dateFormat.parse(date)
+        val currentDate = Date()
+        return dueDate?.after(currentDate) ?: false
+    }
+
+    private fun isValidPriority(priority: String): Boolean {
+        return priority.lowercase() in setOf("high", "medium", "low")
+    }
+
+    private fun isValidCategory(category: String): Boolean {
+        return category.lowercase() in setOf("personal", "work")
+    }
 }
