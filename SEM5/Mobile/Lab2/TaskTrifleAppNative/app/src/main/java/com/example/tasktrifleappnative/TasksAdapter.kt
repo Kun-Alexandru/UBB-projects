@@ -40,10 +40,9 @@ class TasksAdapter(private var tasks: List<Task>, private val context: Context) 
         }
 
 
-        // Add a click listener to open EditTaskActivity
         holder.itemView.setOnClickListener {
             val intent = Intent(context, UpdateTaskActivity::class.java)
-            intent.putExtra("task_id", task.id) // Pass any necessary data
+            intent.putExtra("task_id", task.id)
             context.startActivity(intent)
         }
     }

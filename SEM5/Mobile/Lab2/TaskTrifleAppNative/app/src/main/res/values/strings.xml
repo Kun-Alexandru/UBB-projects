@@ -21,4 +21,10 @@
 
     <string name="choose_priority">Choose Priority</string>
 
+    <string name="TitleSpecial">Title:</string>
+    <string name="DescriptionSpecial">Description:</string>
+    <string name="CategorySpecial">Category (personal/work):</string>
+    <string name="StatusSpecial">Status:</string>
+    <string name="PrioritySpecial">Priority (high/medium/low):</string>
+    <string name="DueDateSpecial">Due Date:</string>
 </resources>
