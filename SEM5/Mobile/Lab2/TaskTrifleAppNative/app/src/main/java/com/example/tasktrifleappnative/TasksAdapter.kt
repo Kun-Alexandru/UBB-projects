@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
 class TasksAdapter(private var tasks: List<Task>, private val context: Context) : RecyclerView.Adapter<TasksAdapter.TaskViewHolder>() {
@@ -26,9 +27,18 @@ class TasksAdapter(private var tasks: List<Task>, private val context: Context) 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val task = tasks[position]
         holder.titleTextView.text = task.title
-        holder.priorityTextView.text = task.priority
         holder.duedateTextView.text = task.dueDate
         holder.statusTextView.text = task.status
+
+        // Set priority text and color based on priority value
+        holder.priorityTextView.text = task.priority
+        when (task.priority.toLowerCase()) {
+            "high" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.red))
+            "medium" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
+            "low" -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.goodgreen))
+            else -> holder.priorityTextView.setTextColor(ContextCompat.getColor(context, R.color.green))
+        }
+
 
         // Add a click listener to open EditTaskActivity
         holder.itemView.setOnClickListener {
@@ -37,6 +47,7 @@ class TasksAdapter(private var tasks: List<Task>, private val context: Context) 
             context.startActivity(intent)
         }
     }
+
 
     fun refreshData(newTasks: List<Task>){
         tasks = newTasks

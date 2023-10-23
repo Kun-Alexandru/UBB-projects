@@ -12,4 +12,13 @@
     <string name="priority">Priority</string>
     <string name="status">Status</string>
 
+    <string-array name="priority_options">
+        <item>Choose Priority</item>
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+
+    <string name="choose_priority">Choose Priority</string>
+
 </resources>
