@@ -37,6 +37,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/llabelTitleAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/addTextHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <EditText
         android:id="@+id/editTextTitle"
         android:layout_width="0dp"
@@ -44,76 +54,126 @@
         android:ems="10"
         android:inputType="text"
         android:hint="@string/title"
-        android:fontFamily="@font/poppins_bold"
-        app:layout_constraintTop_toBottomOf="@id/addTextHeading"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintTop_toBottomOf="@id/llabelTitleAdd"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
     android:background="@drawable/edit_text_border"
         />
 
+    <TextView
+        android:id="@+id/llabelDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <EditText
         android:id="@+id/editTextDescription"
         android:layout_width="0dp"
 
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_border"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="top"
-        android:hint="@string/description"
+        android:layout_height="144dp"
+        android:fontFamily="@font/poppins"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/description"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/llabelDescription"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextTitle" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/edit_text_border" />
+
+    <TextView
+        android:id="@+id/llabelCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <EditText
         android:id="@+id/editTextCategory"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:ems="10"
         android:inputType="text"
         android:hint="@string/category"
-        app:layout_constraintTop_toBottomOf="@id/editTextDescription"
+        app:layout_constraintTop_toBottomOf="@id/llabelCategory"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/edit_text_border" />
+
+    <TextView
+        android:id="@+id/llabelStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editTextStatus"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:ems="10"
         android:inputType="text"
         android:hint="@string/status"
-        app:layout_constraintTop_toBottomOf="@id/editTextCategory"
+        app:layout_constraintTop_toBottomOf="@id/llabelStatus"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/edit_text_border" />
+
+    <TextView
+        android:id="@+id/llabelPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editTextPriority"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:ems="10"
         android:inputType="text"
         android:hint="@string/priority"
-        app:layout_constraintTop_toBottomOf="@id/editTextStatus"
+        app:layout_constraintTop_toBottomOf="@id/llabelPriority"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/edit_text_border" />
+
+    <TextView
+        android:id="@+id/llabelDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due Date:"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextPriority"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editTextDue_Date"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:ems="10"
         android:inputType="date"
         android:hint="@string/due_date"
-        app:layout_constraintTop_toBottomOf="@id/editTextPriority"
+        app:layout_constraintTop_toBottomOf="@id/llabelDueDate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/edit_text_border" />
