@@ -1,3 +1,5 @@
+https://github.com/Kun-Alexandru/UBB-projects/blob/main/SEM5/FLCD/Lab2/
+
 I opted to implement the SymbolTable using a HashTable,which is used for both the identifiers table and constants table. This HashTable uses a nested list structure. 
 
 The hash function that i used for the HashTable works like this:
