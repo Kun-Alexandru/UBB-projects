@@ -1,0 +1,17 @@
+I opted to implement the SymbolTable using a HashTable, which is used for both the identifiers table and constants table. This HashTable uses a nested list structure. 
+
+The hash function that i used for the HashTable works like this:
+-calculates the sum of the ascii characters of the element
+-divides the sum by the size of the SymTable which is chosen before the program is run
+
+If there is colision on the same key, the list from that position will get the element added at the end.
+
+HashTable(int size): Initializes a new hash table with the specified size. The size determines the number of lists used for element storage.
+
+addSymbol(String symbol): Adds a new element to the hash table. It calculates the hash of the element and stores it in the appropriate list. If the element already exists in the list, it returns its position within the list as an (int, int) pair.
+
+toString(): Returns a formatted string representation of the hash table. This makes it easier to visualize the contents of the hash table, especially when used as a symbol table.
+
+hash(String key): Calculates the hash value for a given element based on the sum of ascii values of its characters. This hash value is used to determine the list where the element should be stored.
+
+isKey(int hashPosition, String key): Checks if a key (element) already exists in the list at a given hash position.
