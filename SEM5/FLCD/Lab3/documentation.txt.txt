@@ -1,0 +1,57 @@
+https://github.com/Kun-Alexandru/UBB-projects/tree/main/SEM5/FLCD/Lab3
+
+I opted to implement the SymbolTable using a HashTable, which is used for both the identifiers table and constants table. This HashTable uses a nested list structure. 
+
+The hash function that i used for the HashTable works like this:
+-calculates the sum of the ascii characters of the element
+-divides the sum by the size of the SymTable which is chosen before the program is run
+
+If there is colision on the same key, the list from that position will get the element added at the end.
+
+HashTable(int size): Initializes a new hash table with the specified size. The size determines the number of lists used for element storage.
+
+addSymbol(String symbol): Adds a new element to the hash table. It calculates the hash of the element and stores it in the appropriate list. If the element already exists in the list, it returns its position within the list as an (int, int) pair.
+
+toString(): Returns a formatted string representation of the hash table. This makes it easier to visualize the contents of the hash table, especially when used as a symbol table.
+
+hash(String key): Calculates the hash value for a given element based on the sum of ascii values of its characters. This hash value is used to determine the list where the element should be stored.
+
+isKey(int hashPosition, String key): Checks if a key (element) already exists in the list at a given hash position.
+
+
+PIF
+The PIF is a data structure that holds details regarding tokens and their respective positions in the Symbol Table (ST). It is structured as an ArrayList composed of pairs, where each pair consists of an entry indicating the position in the ST hash table and a corresponding string representing the definition of a symbol (which can be an identifier, a constant, or a token from the token.in file).
+add(Entry position, String symbol) adds a new element in the PIF.
+toString() Returns a formatted string representation of the PIF.
+
+Scanner
+The scanner splits each line from the program by given delimiters and checks for lexical errors; then adds each element in the pif based on what they represent. If the element is an identifier or a constant, it will receive the same position that it has in either the idenfitier/constant table which is a Symbol table along with “ID” or “CONST”. If the element is a token from the token.in file, then it is added in PIF with position -1,-1 along with their “name”.
+
+isIdentifier(String symbol) checks if given symbol is a valid identifier by using identifierRegex and returns a boolean value
+
+isConstant(String symbol) checks if given symbol is a valid constant by using constantRegex and returns a boolean value
+
+isToken(String symbol) checks if given symbol is a valid token from file "token.in" and returns a boolean
+
+addST(String symbol) adds the given symbol to the identifTable if it's an identifier or to the constSymbolTable if it's a constant
+
+addPIF(String symbol) adds pair in PIF such that:
+	for token the position is (-1,-1) and the string is the token itself
+	for identifier the position from identifTable ST and the string "id"
+	for constant the position form 	constSymbolTable ST and the string "const"
+	if it is not a valid identifier/constant/token throws an excpeption: "Lexical error" for the symbol
+
+
+scanLine(String line) scans the given line and checks the symbols, and add it to ST and PIF
+
+scan() scans the program from file line by line and throws lexical error mentioning the number of the line if needed
+
+outputScanner(String filename) writes the tables of the scanned program to the given file
+
+outputTable(String tableStr, String filename) writes given table after scan to given file
+
+toString() function is overriden and displays the ST and PIF tables for a program after a scan; returns string
+
+
+
+

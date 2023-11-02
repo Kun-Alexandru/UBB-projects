@@ -1,5 +1,5 @@
 declare n;
-declare sum = 0;
+declare sum = 20;
 declare number;
 read_number ( n );
 print << "Enter" << convert_to_string ( n ) << "numbers";

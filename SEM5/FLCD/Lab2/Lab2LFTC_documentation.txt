@@ -1,0 +1,24 @@
+https://github.com/Kun-Alexandru/UBB-projects/blob/main/SEM5/FLCD/Lab2/
+
+I opted to implement the SymbolTable using a HashTable,which is used for both the identifiers table and constants table. This HashTable uses a nested list structure. 
+
+The hash function that i used for the HashTable works like this:
+-calculates the sum of the ascii characters of the element
+-divides the sum by the size of the SymTable which is chosen before the program is run
+
+If there is colision on the same key, the list from that position will get the element added at the end.
+
+I also implemented a helping class called "Pair" which gets 2 integers. I use this to help me with the position of a given element in the SymTable. First integer represents the hashed position of the element in the main list, the second one represents the position of the element in the smaller list which contains the elements with the same hash.
+
+
+
+The HashTable has the following methods:
+-constructor, where i create the list of lists that i use to store the elements with a given size
+-add, used when i add a new element in the sym table
+-findByPos which helps me get the elements from a specific position for example position 1,2 represents the 2nd list in the big list, 3rd element in the smaller list
+-getSize which returns the size of the HashTable
+-findPositionOfTerm which returns the position of a given element
+-hash which calculates the hash as described above
+-contains which returns true/false based on existance of the given element in the Table
+-toString which returns the table in a formated way, easier to see
+
