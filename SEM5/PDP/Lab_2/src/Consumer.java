@@ -18,9 +18,8 @@ public class Consumer extends Thread {
                 int val = producerConsumer.get();
                 sum += val;
                 System.out.printf("C: current sum is %d\n", sum);
-
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
     }

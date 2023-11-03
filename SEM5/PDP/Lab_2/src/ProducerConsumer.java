@@ -7,35 +7,27 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ProducerConsumer {
     private final Queue<Integer> queue = new LinkedList<>();
     private final Lock mutex = new ReentrantLock();
-    private final Condition readyToSendProduct = mutex.newCondition();
-    private final Condition readyToReceiveProduct = mutex.newCondition();
+    private final Condition getProductCond = mutex.newCondition();
 
     public ProducerConsumer() {
     }
 
     public Integer get() throws InterruptedException {
         mutex.lock();
-        try {
-            while (queue.isEmpty()) {
-                readyToReceiveProduct.await();
-            }
-
-            Integer value = queue.poll();
-            System.out.printf("%s extracted value %d from the queue, number elements in q = %d\n", Thread.currentThread().getName(), value, queue.size());
-            return value;
-        } finally {
-            mutex.unlock();
+        if (queue.isEmpty()) {
+            getProductCond.await();
         }
+        Integer value = queue.poll();
+        System.out.printf("%s extracted value %d, number elements in q = %d\n", Thread.currentThread().getName(), value, queue.size());
+        mutex.unlock();
+        return value;
     }
 
-    public void add(int val) throws InterruptedException {
+    public void add(int val) {
         mutex.lock();
-        try {
-            queue.add(val);
-            System.out.printf("%s added value %d to the queue, number elements in q = %d\n", Thread.currentThread().getName(), val, queue.size());
-            readyToReceiveProduct.signal();
-        } finally {
-            mutex.unlock();
-        }
+        queue.add(val);
+        System.out.printf("%s added value %d, number elements in q = %d\n", Thread.currentThread().getName(), val, queue.size());
+        getProductCond.signal();
+        mutex.unlock();
     }
 }
