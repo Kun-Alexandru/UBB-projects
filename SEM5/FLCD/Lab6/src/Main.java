@@ -16,6 +16,7 @@ public class Main {
 
     }
 
+    
     public static void printMenu(){
         System.out.println("\n\n0. Exit");
         System.out.println("1. Print non-terminals");
